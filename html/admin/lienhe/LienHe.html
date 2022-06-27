@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="/asset/js/main.js"></script>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" href="">Quản Lý Liên Hệ</a>
+		</li>
+	</ul>
+
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Danh sách Liên Hệ</h2>
+			</div>
+			<!-- Tìm Kiếm -->
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+					</div>
+					<div class="col-lg-6">
+						<form method="GET">
+						  <div class="form-group input">
+						    <input type="input" class="form-control" placeholder="Search..." name="s" id="s">
+						  </div>
+						</form>					
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<table class="table table-bordered table-hover">
+					<thead  class="text-center">
+						<tr>
+							<th width="50px">STT</th>
+							<th>Tên</th>
+							<th>Ngày gửi</th>
+							<th>Email</th>
+							<th>Tiêu đề</th>
+							<th width="70px"></th>
+						</tr>
+					</thead>
+					<tbody class="text-center">
+                        <tr>
+                            <td>1</td>
+                            <td>Tao Lê</td>
+                            <td>2021-10-22</td>
+							<td>levantao23032001@gmail.com</td>
+                            <td style="width: 400px;">Shop uy tín</td>
+                            <td><a href=""><button onclick="deleteitem()" class="btn btn-danger">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nhóm 4</td>
+                            <td>2021-10-22</td>
+							<td>nhom4@gmail.com</td>
+                            <td style="width: 400px;">Shop chất lượng, giao hàng nhanh</td>
+                            <td><a href=""><button onclick="onclick=deleteitem()" class="btn btn-danger">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lập trình web</td>
+                            <td>2021-10-23</td>
+							<td>ltw@gmail.com</td>
+                            <td style="width: 400px;">Shop chất lượng</td>
+                            <td><a href=""><button class="btn btn-danger">Xóa</button ></a></td>
+                        </tr>
+					</tbody>
+				</table>
+				</ul>
+				<a href="../index.html"><button class="btn btn-success">Trở lại</button></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

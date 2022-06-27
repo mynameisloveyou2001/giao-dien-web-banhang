@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link" href="../category/Category.html">Quản lý Danh mục</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link active" href="">Quản lý Sản Phẩm</a>
+		</li>
+	</ul>
+
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Quản lý sản phẩm</h2>
+			</div>
+			<!-- Tìm Kiếm -->
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<a href="nhapsanpham.html">
+							<button class="btn btn-success" style="margin-bottom: 20px;">Thêm sản phẩm
+							</button>
+						</a>
+					</div>
+					<div class="col-lg-6">
+						<form method="GET">
+						  <div class="form-group input">
+						    <input type="input" class="form-control" placeholder="Search..." name="" id="">
+						  </div>
+						</form>					
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<table class="table table-bordered table-hover">
+					<thead  class="text-center">
+						<tr>
+							<th width="50px">STT</th>
+							<th>Hình Ảnh</th>
+							<th>Tên Sản Phẩm</th>
+							<th>Giá Bán</th>
+							<th>Danh mục</th>
+							<th>Trạng thái</th>
+							<th>Ngày Cập Nhật</th>
+							<th>Số lượng</th>
+							<th>Nhập hàng</th>
+							<th width="70px"></th>
+							<th width="70px"></th>
+						</tr>
+					</thead>
+					<tbody class="text-center">
+                        <tr>
+                            <td>1</td>
+                            <td><img style="max-width: 49px;" src="../../../asset/img/dell.PNG" alt="Dell"></td>
+                            <td>Dell</td>
+                            <td>9.999.999đ</td>
+                            <td>Máy tính</td>
+                            <td>Hoạt động</td>
+                            <td>22/10/2021</td>
+							<td>200</td>
+                            <td><a href="nhapsanpham.html"><button class="btn btn-success">Nhập</button></a></td>
+                            <td><a href="editProduct.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger" onclick="deleteitem()">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img style="max-width: 70px;" src="../../../asset/img/macbook.PNG" alt="Dell"></td>
+                            <td>MacBook</td>
+                            <td>29.999.999đ</td>
+                            <td>Máy tính</td>
+                            <td>Ngưng hoạt động</td>
+                            <td>22/10/2021</td>
+							<td>120</td>
+							<td><a href="nhapsanpham.html"><button class="btn btn-success">Nhập</button></a></td>
+                            <td><a href="editProduct.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger" onclick="deleteitem()">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img style="max-width: 49px;" src="../../../asset/img/Asus.PNG" alt="Dell"></td>
+                            <td>Asus</td>
+                            <td>19.999.999đ</td>
+                            <td>Máy tính</td>
+                            <td>Hoạt động</td>
+                            <td>22/10/2021</td>
+							<td>400</td>
+							<td><a href="nhapsanpham.html"><button class="btn btn-success">Nhập</button></a></td>
+                            <td><a href="editProduct.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger" onclick="deleteitem()">Xóa</button ></a></td>
+                        </tr>
+					</tbody>
+				</table>
+				</ul>
+				<a href="../index.html"><button class="btn btn-success">Trở lại</button></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function deleteitem(){
+			var option = confirm("Bạn chắc xóa chứ?");
+			if(!option){
+				return;
+			}
+		}
+	</script>
+</body>
+</html>

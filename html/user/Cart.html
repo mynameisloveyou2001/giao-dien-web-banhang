@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan</title>
+    <link rel="stylesheet" href="../../asset/css/Cart.css">
+    <link rel="stylesheet" href="../../asset/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h2 class="text-center">Giỏ hàng</h2>
+    <div class="container">
+        <table id="cart" class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th style="width:50%">Tên sản phẩm</th>
+                    <th style="width:10%">Giá</th>
+                    <th style="width:8%">Số lượng</th>
+                    <th style="width:22%" class="text-center">Thành tiền</th>
+                    <th style="width:10%"> </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td  id="deleteIdd" data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"><img
+                                    src="../../asset/img/Dell7.PNG"
+                                    alt="Sản phẩm 1" class="img-responsive" width="100">
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="nomargin">Laptop Dell VOS15 5515 AMD R5-5500U, 8GD4, 512SSD</h4>
+                                <p>Nhỏ gọn và đẹp</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="Price">20.000.000 đ</td>
+                    <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+                    </td>
+                    <td data-th="Subtotal" class="text-center">20.000.000 đ</td>
+                    <td>
+                      <a id="deleteId" href=""><i onclick="deleteitem()" class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr id="deleteId11">
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"><img
+                                    src="../../asset/img/Dell4.PNG"
+                                    alt="Dell4" class="img-responsive" width="100">
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="nomargin">Dell đời mới</h4>
+                                <p>Màu đen bóng, Dây 2m</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="Price">30.000.000 đ</td>
+                    <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+                    </td>
+                    <td data-th="Subtotal" class="text-center">30.000.000 đ</td>
+                    <td>
+                       <a onclick="deleteitem1()" id="deleteId1"  href=""><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr id="deleteId22">
+                    <td data-th="Product">
+                        <div class="row">
+                            <div class="col-sm-2 hidden-xs"><img
+                                    src="../../asset/img/tainghe.PNG"
+                                    alt="Sản phẩm 1" class="img-responsive" width="100">
+                            </div>
+                            <div class="col-sm-10">
+                                <h4 class="nomargin">Tai nghe có dây hình sợi mì Điện thoại di động Xiaomi, Android</h4>
+                                <p>Màu sắc đẹp và dễ dùng</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="Price">200.000 đ</td>
+                    <td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+                    </td>
+                    <td data-th="Subtotal" class="text-center">200.000 đ</td>
+                    <td>
+                      <a onclick="deleteitem2()" id="deleteId2"  href=""><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="visible-xs">
+                    <td class="text-center"><strong>Tổng 200.000 đ</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="user.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp
+                            tục mua hàng</a>
+                    </td>
+                    <td colspan="2" class="hidden-xs"> </td>
+                    <td class="hidden-xs text-center"><strong>Tổng tiền 50.200.000 đ</strong>
+                    </td>
+                    <td><a href="giohang.html" class="btn btn-success btn-block">Thanh toán <i
+                                class="fa fa-angle-right"></i></a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script type="text/javascript">
+		function deleteitem(){
+			var option = confirm("Bạn chắc xóa chứ?");
+			if(option){
+
+                    var elem = document.getElementById('deleteIdd');
+ 				    elem.parentNode.removeChild(elem);
+			}
+		}
+        function deleteitem1(){
+			var option = confirm("Bạn chắc xóa chứ?");
+			if(option){
+                    var elem = document.getElementById('deleteId11');
+ 				    elem.parentNode.removeChild(elem);
+			}
+		}
+       function deleteitem2(){
+			var option = confirm("Bạn chắc xóa chứ?");
+			if(option){
+                    var elem = document.getElementById('deleteId22');
+ 				    elem.parentNode.removeChild(elem);
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+    <style type="text/css">
+        .text {
+            background-color: gray;
+            display: inline-block;
+            margin: 0 591px;
+            border: 1px solid #333;
+        }
+
+        .text:hover .fonttext {
+            background-color: red;
+            cursor: context-menu;
+            color: white;
+            text-decoration: none;
+        }
+
+        .fonttext {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+        }
+    </style>
+    <title>Tin Tức</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+</head>
+<body>
+
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="text-center">Cập nhật tin tức</h2>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <form action="" method="post">
+                        <label for="name">Tên bài viết</label>
+                        <input type="text" name="id" value="" hidden>
+                        <input required="true" type="text" class="form-control" id="id" name="name" value="">
+                        <label for="name">Mô tả</label>
+                        <textarea class="form-control" id="content" rows="2" name="content"></textarea>
+                        <button onclick="window.history.go(-1); return false;"  type="submit" style="margin-top: 70px;" class="btn btn-success">Lưu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Perious page -->
+        <div class="text">
+            <a href="news.html" class="fonttext">BACK</a>
+        </div>
+        
+    <script type="text/javascript">
+        $(function()
+			{
+				$('#content').summernote({ height: 300});
+			})
+    </script>
+</body>

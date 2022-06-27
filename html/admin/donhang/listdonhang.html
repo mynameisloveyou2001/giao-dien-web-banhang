@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+		<li class="nav-ite active">
+			<a class="nav-link" href="Category.html">Quản lý Đơn Hàng</a>
+		</li>
+	</ul>
+
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Quản lý Đơn Hàng</h2>
+			</div>
+			<!-- Tìm Kiếm -->
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+					</div>
+					<div class="col-lg-6">
+						<form method="GET">
+						  <div class="form-group input">
+						    <input type="input" class="form-control" placeholder="Search..." name="" id="">
+						  </div>
+						</form>					
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<table class="table table-bordered table-hover">
+					<thead  class="text-center">
+						<tr>
+							<th>Mã đơn hàng</th>
+							<th>Khách Hàng</th>
+							<th>Điện thoại</th>
+							<th>Tổng tiền</th>
+							<th>Ngày tạo</th>
+							<th>Trạng thái</th>
+							<th colspan="2">Xử lý đơn</th>
+							<th colspan="2">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody class="text-center">
+                        <tr>
+                            <td>SYI8qEFH</td>
+                            <td>Nhóm 4</td>
+                            <td>0999999999</td>
+                            <td>9.999.999đ</td>
+                            <td>2021-12-13</td>
+                            <td>Đang chờ duyệt</td>
+                            <td><a href="#"><button id="confirm" onclick="confirmOrder()" class="btn btn-success">Duyệt đơn hàng</button></a></td>
+                            <td><a href="#"><button class="btn btn-danger" onclick="deleteitem()">Hủy đơn</button></a></td>
+                            <!-- <td><a href="#"><button class="btn btn-danger" onclick="deleteitem()">Xóa đơn</button></a></td> -->
+                            <td><a href="xemdon.html"><button class="btn btn-warning" >Xem</button ></a></td>
+                        </tr>
+						<tr>
+                            <td>ABCFESSQ</td>
+                            <td>Đỗ Đạt</td>
+                            <td>0988888888</td>
+                            <td>19.999.999đ</td>
+                            <td>2022-02-14</td>
+                            <td id="confirmPayOrder1">Đang chờ duyệt</td>
+                            <td><a id="confirmPayOrder" onclick="confirmPay()" href="#"><button class="btn btn-success">Thanh toán chưa?</button></a></td>
+                            <td><a id="deleteOrder" href="#"><button class="btn btn-danger" onclick="deleteitem()">Hủy đơn</button></a></td>
+                            <td><a href="xemdon.html"><button class="btn btn-warning" >Xem</button ></a></td>
+                        </tr>
+						<tr id="deleteSp">
+
+                            <td>SYI8qeQH</td>
+                            <td>Thành Công</td>
+                            <td>0887777712</td>
+                            <td>12.999.999đ</td>
+                            <td>2022-01-13</td>
+                            <td id="status">Đang chờ duyệt</td>
+                            <td><a id="destroyOrder" href="#"><button class="btn btn-success">Duyệt đơn hàng</button></a></td>
+                            <td ><a id="addbutton" href="#"><button class="btn btn-danger" id="destroyOrder1" onclick="destroyOrder()">Hủy đơn</button></a></td>
+                            <td ><a href="xemdon.html"><button class="btn btn-warning" >Xem</button ></a></td>
+								<!-- <td><a id="buttondelete" href=""></a></td> -->
+                        </tr>
+					</tbody>
+				</table>
+				</ul>
+				<a href="../index.html"><button style="" class="btn btn-success">Trở lại</button></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function deleteitem(){
+			var option = confirm("Bạn chắc muốn xóa chứ?");
+			if(option){
+				var elem = document.getElementById('deleteSp');
+ 				elem.parentNode.removeChild(elem); ;
+			}
+		}
+		function destroyOrder(){
+			var option = confirm("Bạn chắc muốn hủy đơn hàng chứ?");
+			if(option){
+				var elem = document.getElementById('destroyOrder1');
+ 				elem.parentNode.removeChild(elem);
+				document.getElementById("destroyOrder").innerHTML='';
+				document.getElementById("addbutton").innerHTML='<button class="btn btn-danger" onclick="deleteitem()">Xóa</button>';
+				document.getElementById("status").innerHTML='Đã hủy';
+				// document.getElementById("buttondelete").innerHTML='<button onclick="deleteitem()" class="btn btn-warning" >Xóa</button>';
+			}
+		}
+function confirmOrder(){
+	var option = confirm("Xác nhận gói và chuẩn bị giao hàng?");
+	if(option){
+		document.getElementById("confirm").innerHTML='Thanh toán chưa?';
+			}
+}
+
+
+function confirmPay(){
+	var option = confirm("Xác nhận đã thanh toán thành công?");
+	if(option){
+	document.getElementById("confirmPayOrder").innerHTML='<span style="color:black">Đã giao</span>';
+	document.getElementById("confirmPayOrder1").innerHTML='Đã giao';
+	document.getElementById("deleteOrder").innerHTML='';
+			}
+}
+	</script>
+</body>
+</html>

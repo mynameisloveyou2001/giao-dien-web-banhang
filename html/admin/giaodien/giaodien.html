@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+		<li class="nav-item active">
+			<a class="nav-link">Quản lý Giao Diện</a>
+		</li>
+	</ul>
+
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Quản lý Giao Diện</h2>
+			</div>
+			<!-- Tìm Kiếm -->
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<a href="nhapgiaodien.html">
+							<button class="btn btn-success" style="margin-bottom: 20px;">Thêm Giao Diện
+							</button>
+						</a>
+					</div>
+					<div class="col-lg-6">
+						<form method="GET">
+						  <div class="form-group input">
+						    <input type="input" class="form-control" placeholder="Search..." name="" id="">
+						  </div>
+						</form>					
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<table class="table table-bordered table-hover">
+					<thead  class="text-center">
+						<tr>
+							<th width="50px">STT</th>
+							<th>Hình Ảnh</th>
+							<th>Tên Giao Diện</th>
+							<th>Banner Liên kết</th>
+							<th>Trạng thái</th>
+							<th colspan="2" width="70px">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody class="text-center">
+                        <tr>
+                            <td>1</td>
+                            <td><img style="max-width: 170px;" src="../../../asset/img/banners/banner-samsungs10.png" alt="Dell"></td>
+                            <td>Banner SamSung S10</td>
+                            <td>Bannner 1</td>
+							<td>Đang hoạt động</td>
+                            <td><a href="editgiaodien.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger" onclick="deleteitem()">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img style="max-width: 170px;" src="../../../asset/img/banners/banner2.png" alt="Dell"></td>
+                            <td>Banner SamSung A9</td>
+                            <td>Bannner 2</td>
+							<td>Đang hoạt động</td>
+                            <td><a href="editgiaodien.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger" onclick="deleteitem()">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img style="max-width: 170px;" src="../../../asset/img/banners/iphone-banner.jpg" alt="Dell"></td>
+                            <td>Banner SamSung Iphone</td>
+                            <td>Bannner 3</td>
+							<td>Ngưng hoạt động</td>
+                            <td><a href="editgiaodien.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger" onclick="deleteitem()">Xóa</button ></a></td>
+                        </tr>
+					</tbody>
+				</table>
+				</ul>
+				<a href="../index.html"><button class="btn btn-success">Trở lại</button></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function deleteitem(){
+			var option = confirm("Bạn chắc xóa chứ?");
+			if(!option){
+				return;
+			}
+		}
+	</script>
+</body>
+</html>

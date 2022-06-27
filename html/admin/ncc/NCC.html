@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4chan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a class="nav-link active" href="">Quản Lý Nhà Cung Cấp</a>
+		</li>
+	</ul>
+
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Danh sách nhà cung cấp</h2>
+			</div>
+			<!-- Tìm Kiếm -->
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-6">
+						<a href="themncc.html">
+							<button class="btn btn-success" style="margin-bottom: 20px; ">Thêm nhà cung cấp
+							</button>
+						</a>
+					</div>
+					<div class="col-lg-6">
+						<form method="GET">
+						  <div class="form-group input">
+						    <input type="input" class="form-control" placeholder="Search..." name="s" id="s">
+						  </div>
+						</form>					
+					</div>
+				</div>
+			</div>
+			<div class="panel-body">
+				<table class="table table-bordered table-hover">
+					<thead  class="text-center">
+						<tr>
+							<th width="50px">STT</th>
+							<th>Mã</th>
+							<th>Tên nhà cung cấp</th>
+							<th >Danh mục</th>
+							<th>Trạng thái</th>
+							<th width="70px"></th>
+							<th width="70px"></th>
+						</tr>
+					</thead>
+					<tbody class="text-center">
+                        <tr>
+                            <td>1</td>
+                            <td>ABCDEF</td>
+							<td>Nhà cung cấp Quảng Trị</td>
+                            <td>Điện thoại, máy tính, laptop, phụ kiện</td>
+                            <td>Đang hoạt động</td>
+                            <td><a href="themncc.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>TAOLE</td>
+							<td>Nhà cung cấp Huế</td>
+                            <td>Điện thoại, máy tính</td>
+                            <td>Đang hoạt động</td>
+                            <td><a href="themncc.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger">Xóa</button ></a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>NHOM4</td>
+							<td>Nhà cung cấp Đà Nẵng</td>
+                            <td>laptop, phụ kiện</td>
+                            <td>Dừng hoạt động</td>
+                            <td><a href="themncc.html"><button class="btn btn-warning">Sửa</button></a></td>
+                            <td><a href=""><button class="btn btn-danger">Xóa</button ></a></td>
+                        </tr>
+					</tbody>
+				</table>
+				</ul>
+				<a href="../index.html"><button class="btn btn-success">Trở lại</button></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

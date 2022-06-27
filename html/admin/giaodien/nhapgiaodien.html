@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	.text  {
+	background-color: gray;
+	display: inline-block;
+	margin: 0 591px;
+	border: 1px solid #333;
+}
+
+.text:hover .fonttext {
+	background-color: red;
+	cursor: context-menu;
+	color: white;
+	text-decoration: none;
+}
+
+.fonttext {
+	text-decoration: none;
+	color: black;
+	font-weight: 700;
+}
+	</style>
+	<title>Danh sách Giao Diện</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../asset/css/main.css">
+	<!-- Summernode -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+</head>
+<body>
+	<ul class="nav nav-tabs">
+		<li class="nav-item active">
+			<a class="nav-link" >Quản lý Giao Diện</a>
+		</li>
+	</ul>
+
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h2 class="text-center">Thêm Giao Diện</h2>
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<form method="post">
+						<div class="form-group">
+						<label for="name">Tên Giao Diện</label>
+						<input type="text" name="id" value="" HIDDEN>
+				  		<input required="true" type="text" class="form-control" id="title" name="title" value="">
+				  		</div>
+
+				  		<div class="form-group">
+				  		<label for="id_category">Chọn Danh mục loại sản phẩm:</label>
+				  		<select class="form-control" name="id_category" id="id_category">
+				  			<option>--- Lựa chọn Trạng Thái ---</option>
+				  			<option>Đang hoạt động</option>
+				  			<option>Ngưng hoạt động</option>
+				  		</select>
+				  		</div>
+				  		<div class="form-group">
+				  		<label for="price">Banner Liên kết</label>
+				  		<input required="true" type="number" class="form-control" id="price" name="price" value="">
+						</div>
+						<div class="form-group">
+						<label for="thumbnail">Hình Ảnh</label>
+				  		<input required="true" type="file" class="form-control" id="thumbnail" name="thumbnail" value="">
+				  		<img src="" id="img_thumbnail" style="max-width: 200px;" >
+                        </div>
+						<button  onclick="window.history.go(-1); return false;" class="btn btn-success">Lưu</button>
+					</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Perious page -->
+	<div class="text">
+		<a href="giaodien.html" class="fonttext">BACK</a>
+	</div>
+
+    <script type="text/javascript">
+        $(function()
+			{
+				$('#content').summernote({ height: 300});
+			})
+    </script>
+</body>
+</html>
